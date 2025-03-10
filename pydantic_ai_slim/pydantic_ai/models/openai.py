@@ -105,7 +105,7 @@ class OpenAIModel(Model):
         self,
         model_name: OpenAIModelName,
         *,
-        provider: Literal['openai', 'deepseek'] | Provider[AsyncOpenAI] = 'openai',
+        provider: Literal['openai', 'deepseek', 'azure'] | Provider[AsyncOpenAI] = 'openai',
         system_prompt_role: OpenAISystemPromptRole | None = None,
         system: str | None = 'openai',
     ) -> None: ...
@@ -129,7 +129,7 @@ class OpenAIModel(Model):
         self,
         model_name: OpenAIModelName,
         *,
-        provider: Literal['openai', 'deepseek'] | Provider[AsyncOpenAI] | None = None,
+        provider: Literal['openai', 'deepseek', 'azure'] | Provider[AsyncOpenAI] | None = None,
         base_url: str | None = None,
         api_key: str | None = None,
         openai_client: AsyncOpenAI | None = None,
